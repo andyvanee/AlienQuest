@@ -1,0 +1,9 @@
+A loose interpretation of the classic Mac game Crystal Quest
+
+This experiment has a few goals.
+
+1. Get some more experience with the prototype.js library.
+2. Build a simple game engine from the ground up.
+3. Build a HTML/CSS/JS action game that requires very few special browser features.
+
+On all points, I think it's near the mark right now. The visuals are obviously very plain, but the gameplay is pretty fun. The only special browser feature I'm using is the CSS :after pseudo-class. This is not required by the game logic, but makes the calculations a bit easier. The parent div of each of the sprites is a 0px div centered on the sprite. I use this parent div to test collisions, set positions and set the sprite background color.

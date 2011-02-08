@@ -1,0 +1,183 @@
+body {
+  background-color: #161616;
+  overflow: hidden;
+  cursor: crosshair;
+}
+
+#crystal_view, #enemy_view, #player_view, #shot_view {
+  margin: 0; padding: 0;
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 600px;
+  width: 800px;
+  overflow: hidden;
+}
+.hud {
+  position: absolute;
+  top: 5px;
+  color: #AAA;
+  background-color: transparent;
+  font-family: "Monaco", monospace;
+  font-size: .8em;
+  z-index: 2;
+}
+
+.hud p {padding: 5px; display: inline; margin: 0; white-space: pre;}
+#score {
+  left: 0px;
+  width: 180px;
+}
+#lives {
+  left: 180px;
+  width: 170px;
+  background-color: rgba(0,0,255, 0.4);
+}
+
+.hud p:before {
+  position: absolute;
+  width: 170px;
+  height: 18px;
+  left: 0px;
+  top: -2px;
+  border: 1px solid #AAA;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  background-color: rgba(0,0,250, 0);
+  content: "";
+}
+
+#time {
+  right: 0px;
+  width: 180px;
+}
+
+.enemy1, .crystal, .player {
+  position: absolute;
+  top: 0;
+  left: -50px;
+  height: 0px;
+  width: 0px;
+}
+.enemy1:after, .crystal:after, .player:after {
+  font-family: 'Helvetica Neue';
+  font-weight: bold;
+  font-size: 26px;
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  padding: 13px;
+  top: -30px;
+  left: -30px;
+  border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-width: 2px
+  background-color: inherit;
+  color: inherit;
+}
+
+.enemy1 {
+  background-color: #3A3;
+}
+.enemy1:after {
+  width: 40px;
+  height: 30px;
+  padding: 0px;
+  top: -17px;
+  left: -22px;
+  border-left: 2px solid #6C6;
+  border-top: 2px solid #6C6;
+  border-right: 2px solid #060;
+  border-bottom: 2px solid #060;
+  
+  border-radius: 0px;
+  -moz-border-radius: 0px;
+  content: '';
+  background-color: inherit;
+}
+
+.crystal {
+  background-color: rgba(75,90,140, 0.2);
+}
+
+.crystal:after {
+  border: 2px solid rgba(0, 150, 188, 0.5);
+  color: rgba(222,64,113, 0.6);
+  background-color: inherit;
+  content: '';
+}
+
+.player {
+  top: 200px;
+  left: 200px;
+  background-color: #33A;
+  width: 0;
+  height: 0;
+}
+.player:after {
+  width: 46px;
+  height: 46px;
+  padding: 0px;
+  top: -25px;
+  left: -25px;
+  border: 2px solid #66F;
+  background-color: inherit;
+  color: #88F;
+  content: "";
+}
+
+.shot {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+}
+.shot:after {
+  display: block;
+  position: relative;
+  top: -4px;
+  left: -4px;
+  height: 8px;
+  width: 8px;
+  content: "";
+  background-color: #EA0;
+  border: 1px solid #FFF;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+}
+
+.dialogue, .dialogue button {
+  border-radius: 9px;
+  color: #CCC;
+  font-family: "Monaco", monospace;
+  text-align: center;
+}
+
+.dialogue h1{
+  width: 100%;
+  background-color: #113;
+  padding: 12px 0;
+  margin: 4px 0;
+  border: 2px solid #444;
+}
+.dialogue {
+  position: absolute;
+  background-color: rgba(0,0,0,0.8);
+  border: 2px solid #666;
+  width: 500px; height: 300px;
+  margin: 128px; padding: 22px;
+  font-size: 0.8em;
+	white-space: pre;
+}
+
+.dialogue button {
+  width: 200px;
+  background-color: rgba(0,255,0,0.4);
+  border: 1px solid #999;
+  padding: 8px;
+  margin-top: 20px;
+  font-size: 1.2em;
+}

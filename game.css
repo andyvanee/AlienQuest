@@ -1,0 +1,11 @@
+body {
+  background-color: #000;
+}
+
+iframe {
+  border: 2px solid #666;
+  border-radius: 12px;
+  -moz-border-radius: 12px;
+  padding: 14px;
+  background-color: #000;
+}
